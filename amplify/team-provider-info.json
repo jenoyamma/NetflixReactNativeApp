@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-servianflixapp-dev-160746-authRole",
+            "UnauthRoleArn": "arn:aws:iam::110002000284:role/amplify-servianflixapp-dev-160746-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::110002000284:role/amplify-servianflixapp-dev-160746-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "amplify-servianflixapp-dev-160746-deployment",
+            "UnauthRoleName": "amplify-servianflixapp-dev-160746-unauthRole",
+            "StackName": "amplify-servianflixapp-dev-160746",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:110002000284:stack/amplify-servianflixapp-dev-160746/f7b748d0-e506-11ea-8b28-0abc5d72d376",
+            "AmplifyAppId": "d1hgvnzfhsqvj5"
+        },
+        "categories": {
+            "auth": {
+                "servianflixapp692c06a4": {}
+            }
+        }
+    }
+}

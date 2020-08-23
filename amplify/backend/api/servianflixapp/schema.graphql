@@ -1,0 +1,11 @@
+type recmovie @model {
+  id: ID!
+  movieUri: String
+  movieTitle: String  
+  movieReleaseYear: String  
+  movieDescription: String
+  user: String
+  type: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}

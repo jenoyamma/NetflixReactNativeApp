@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "servianflixapp",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authservianflixapp692c06a4",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

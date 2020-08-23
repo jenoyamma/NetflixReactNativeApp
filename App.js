@@ -1,19 +1,31 @@
+////////////////////////////////////////////////////////////////////////////////////////////////
+// Utilities
 import React from 'react';
 import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+// Navigation
 import { NavigationContainer } from '@react-navigation/native';
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Tab = createBottomTabNavigator();
 
 import { enableScreens } from 'react-native-screens';
 enableScreens();
+
 import {createNativeStackNavigator} from 'react-native-screens/native-stack';
 const NativeStack = createNativeStackNavigator();
 
+// Amplify Authenticator
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+import { withAuthenticator } from 'aws-amplify-react-native';
+Amplify.configure({...config, Analytics: {disabled: true}})
+
+// Screens
 import Movie from './src/screen/Movie';
 import MovieDetail from './src/screen/MovieDetail';
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 function MovieScreen() { 
   return ( 
@@ -117,6 +129,20 @@ function MyTabs() {
   );
 }
 
+// function Root() {
+//   return(
+//     <NavigationContainer>      
+//       {MyTabs()}
+//     </NavigationContainer>
+//   )
+// }
+
+// export default function App() {
+//   return (
+//     <Root/>
+//   )
+// }
+
 function Root() {
   return(
     <NavigationContainer>      
@@ -125,8 +151,10 @@ function Root() {
   )
 }
 
+const AppWithAuth = withAuthenticator(Root, false)
+
 export default function App() {
-  return (
-    <Root/>
-  )
+    return (
+      <AppWithAuth/>
+    )
 }
