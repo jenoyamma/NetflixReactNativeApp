@@ -1,6 +1,6 @@
-import React from 'react'
+import React from './node_modules/react'
 import { View, Image, ImageBackground, Text, StyleSheet } from 'react-native'
-import IonIcon from 'react-native-vector-icons/Ionicons'
+import IonIcon from './node_modules/react-native-vector-icons/Ionicons'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 export default class Movie extends React.Component {

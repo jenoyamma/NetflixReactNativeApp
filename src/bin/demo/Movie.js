@@ -10,10 +10,6 @@ const servianflixlogo = {
     id: 'servianflix',
     uri: require('../../assets/servianflix.png')
 }
-const comedy_movies = [
-    { id: '41', uri: require('../../assets/posters/comedy/41.jpg') },
-    { id: '94', uri: require('../../assets/posters/comedy/94.jpg') },  
-]
 
 import { API, graphqlOperation } from 'aws-amplify';
 import * as queries from "../graphql/queries";
